@@ -116,6 +116,7 @@ public class Calculadora {
             exponenciacao.quadrado();
 
         }
+        System.out.println("Executado com sucesso");
 
     }
 }
