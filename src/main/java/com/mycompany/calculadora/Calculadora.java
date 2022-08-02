@@ -60,7 +60,6 @@ public class Calculadora {
 
                         valor1 = Integer.parseInt(JOptionPane.showInputDialog("Digite o primeiro valor:"));
                         valor2 = Integer.parseInt(JOptionPane.showInputDialog("Digite o segundo valor:"));
-
                         // passsando os valores para minha classe Calculos
 
                         operar.set_valor1(valor1);
