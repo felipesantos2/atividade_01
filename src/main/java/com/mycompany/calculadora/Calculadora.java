@@ -14,7 +14,7 @@ import javax.swing.JOptionPane;
 public class Calculadora {
 
     public static void main(String[] args) {
-        int opcao;
+        int operacao;
         int valor1, valor2;
 
         JOptionPane.showMessageDialog(null, "Vamos Fazer nossas operações \n");
@@ -22,13 +22,13 @@ public class Calculadora {
         JOptionPane.showMessageDialog(null,
                 "Digite: \n 1 - Para somar:\n 2 - Para subtrair: \n 3 - Para multiplicar: \n 4 - Para dividir: \n 5 - Exponenciação(Quadrado de um numero:) \n 0 - Para voltar do Inicio");
         // Descobrindo as operações;
-        opcao = Integer.parseInt(JOptionPane.showInputDialog("Digite sua operação:"));
+        operacao = Integer.parseInt(JOptionPane.showInputDialog("Digite sua operação:"));
 
         // caso especifido da exponenciacao que só necessita de um unico valor de
         // entrada
-        if (opcao != 5) {
+        if (operacao != 5) {
 
-            switch (opcao) {
+            switch (operacao) {
                 case 1:
                     // Adição
                     JOptionPane.showMessageDialog(null, "Você escolheu a Adição \n");
