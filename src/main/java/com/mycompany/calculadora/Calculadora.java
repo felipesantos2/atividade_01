@@ -6,7 +6,8 @@ import javax.swing.JOptionPane;
  *
  * @author Felipe
  */
-public class Calculadora {
+
+public class Calculadora { 
 
     public static void main(String[] args) {
         int operacao;

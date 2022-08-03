@@ -11,7 +11,6 @@ public class Calculos {
      // soma, subtração, multiplicação, divisão
     private int valor1;
     private int valor2;
-
     
     public void set_valor1(int valor1){
         this.valor1 = valor1;
