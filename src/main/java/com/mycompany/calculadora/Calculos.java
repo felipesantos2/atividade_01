@@ -24,10 +24,11 @@ public class Calculos {
        return this.valor2;
     }
     
-    private Integer get_valor1(){
-       return this.valor1;
+    private Integer get_valor1() {
+        return this.valor1;
     }
- //metodo de soma
+    
+    //metodo de soma
     public Integer  somar(){
         
         int i =  this.get_valor1() + this.get_valor2();

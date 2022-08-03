@@ -7,7 +7,7 @@ import javax.swing.JOptionPane;
  * @author Felipe
  */
 
-public class Calculadora { 
+public class Calculadora {
 
     public static void main(String[] args) {
         int operacao;
@@ -96,7 +96,7 @@ public class Calculadora {
                     // passando os valores para os metodos
                     operar.set_valor1(valor1);
                     operar.set_valor2(valor2);
-                    //resultado a ser exibido
+                    // resultado a ser exibido
                     operar.dividir();
                     break;
 
@@ -113,7 +113,7 @@ public class Calculadora {
 
             // passando os valores para os metodos
             operar.set_valor1(valor1);
-            
+
             // resultado a ser exibido
             operar.quadrado();
 
