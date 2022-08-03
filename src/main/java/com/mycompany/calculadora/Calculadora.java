@@ -30,7 +30,7 @@ public class Calculadora {
 
         }
 
-        // criando o objeto dp tipo Calculos
+        // criando o objeto do tipo Calculos
         Calculos operar = new Calculos();
 
         // caso especifido da exponenciacão que só necessita de um unico valor entrada
@@ -50,6 +50,7 @@ public class Calculadora {
 
                     operar.set_valor1(valor1);
                     operar.set_valor2(valor2);
+                    // resultado a ser exibido
                     operar.somar();
                     break;
                 case 2:
@@ -65,6 +66,7 @@ public class Calculadora {
 
                     operar.set_valor1(valor1);
                     operar.set_valor2(valor2);
+                    // resultado a ser exibido
                     operar.subtrair();
                     break;
                 case 3:
@@ -80,18 +82,21 @@ public class Calculadora {
 
                     operar.set_valor1(valor1);
                     operar.set_valor2(valor2);
+                    // resultado a ser exibido
                     operar.multiplicar();
                     break;
                 case 4:
                     // Divisão
                     JOptionPane.showMessageDialog(null, "Você escolheu a Divisão \n");
-                    Calculos divisao = new Calculos();
+
                     // pegando os valores da operação
                     valor1 = Integer.parseInt(JOptionPane.showInputDialog("Digite o primeiro valor:"));
                     valor2 = Integer.parseInt(JOptionPane.showInputDialog("Digite o segundo valor:"));
+
                     // passando os valores para os metodos
                     operar.set_valor1(valor1);
                     operar.set_valor2(valor2);
+                    //resultado a ser exibido
                     operar.dividir();
                     break;
 
@@ -102,10 +107,14 @@ public class Calculadora {
             }
 
         } else {
-
+            // Eponenciação
             JOptionPane.showMessageDialog(null, "Você escolheu a Exponênciação \n");
             valor1 = Integer.parseInt(JOptionPane.showInputDialog("Digite o  valor:"));
+
+            // passando os valores para os metodos
             operar.set_valor1(valor1);
+            
+            // resultado a ser exibido
             operar.quadrado();
 
         }
