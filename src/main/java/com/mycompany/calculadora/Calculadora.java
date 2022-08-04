@@ -15,109 +15,115 @@ public class Calculadora {
 
         // mensagem inicial a ser exibida
         JOptionPane.showMessageDialog(null, "Vamos Fazer nossas operações \n");
-
-        JOptionPane.showMessageDialog(null,
+        
+        // inicio do laço 
+        do{
+             JOptionPane.showMessageDialog(null,
                 "Digite: \n 1 - Para somar:\n 2 - Para subtrair: \n 3 - Para multiplicar: \n 4 - Para dividir: \n 5 - Exponenciação( Quadrado de um numero: ) \n 0 - Para voltar do Inicio");
+            
+           // Descobrindo as operações;
+          operacao = Integer.parseInt(JOptionPane.showInputDialog("Digite sua operação:"));
 
-        // Descobrindo as operações;
-        operacao = Integer.parseInt(JOptionPane.showInputDialog("Digite sua operação:"));
 
-        // validadado as operações
+            if (operacao > 5 || operacao < 0) {
+                JOptionPane.showMessageDialog(null, "Opção Invalida      \n Execute o Código Novamente");
+                System.exit(0);
 
-        if (operacao > 5 || operacao < 0) {
-            JOptionPane.showMessageDialog(null, "Opção Invalidas      \n Execute o Código Novamente");
-            System.exit(0);
+            }
 
-        }
+            // criando o objeto do tipo Calculos
+            Calculos operar = new Calculos();
 
-        // criando o objeto do tipo Calculos
-        Calculos operar = new Calculos();
+            // caso especifido da exponenciacão que só necessita de um unico valor entrada
+            if (operacao != 5) {
 
-        // caso especifido da exponenciacão que só necessita de um unico valor entrada
-        if (operacao != 5) {
+                switch (operacao) {
+                    case 1:
+                        // Adição
+                        JOptionPane.showMessageDialog(null, "Você escolheu a Adição \n");
 
-            switch (operacao) {
-                case 1:
-                    // Adição
-                    JOptionPane.showMessageDialog(null, "Você escolheu a Adição \n");
+                        // pegando os valores da operação
 
-                    // pegando os valores da operação
+                        valor1 = Integer.parseInt(JOptionPane.showInputDialog("Digite o primeiro valor:"));
+                        valor2 = Integer.parseInt(JOptionPane.showInputDialog("Digite o segundo valor:"));
 
-                    valor1 = Integer.parseInt(JOptionPane.showInputDialog("Digite o primeiro valor:"));
-                    valor2 = Integer.parseInt(JOptionPane.showInputDialog("Digite o segundo valor:"));
+                        // passsando os valores para minha classe Calculos
 
-                    // passsando os valores para minha classe Calculos
+                        operar.set_valor1(valor1);
+                        operar.set_valor2(valor2);
+                        // resultado a ser exibido
+                        operar.somar();
+                        break;
+                    case 2:
+                        // Subtração
+                        JOptionPane.showMessageDialog(null, "Você escolheu a Subtração \n");
 
-                    operar.set_valor1(valor1);
-                    operar.set_valor2(valor2);
-                    // resultado a ser exibido
-                    operar.somar();
-                    break;
-                case 2:
-                    // Subtração
-                    JOptionPane.showMessageDialog(null, "Você escolheu a Subtração \n");
+                        // Calculos subtracao = new Calculos();
+                        // pegando os valores da operação
 
-                    // Calculos subtracao = new Calculos();
-                    // pegando os valores da operação
+                        valor1 = Integer.parseInt(JOptionPane.showInputDialog("Digite o primeiro valor:"));
+                        valor2 = Integer.parseInt(JOptionPane.showInputDialog("Digite o segundo valor:"));
+                        // passsando os valores para minha classe Calculos
 
-                    valor1 = Integer.parseInt(JOptionPane.showInputDialog("Digite o primeiro valor:"));
-                    valor2 = Integer.parseInt(JOptionPane.showInputDialog("Digite o segundo valor:"));
-                    // passsando os valores para minha classe Calculos
+                        operar.set_valor1(valor1);
+                        operar.set_valor2(valor2);
+                        // resultado a ser exibido
+                        operar.subtrair();
+                        break;
+                    case 3:
+                        // multiplicação
+                        JOptionPane.showMessageDialog(null, "Você escolheu a multiplicação \n");
 
-                    operar.set_valor1(valor1);
-                    operar.set_valor2(valor2);
-                    // resultado a ser exibido
-                    operar.subtrair();
-                    break;
-                case 3:
-                    // multiplicação
-                    JOptionPane.showMessageDialog(null, "Você escolheu a multiplicação \n");
+                        // pegando os valores da operação
 
-                    // pegando os valores da operação
+                        valor1 = Integer.parseInt(JOptionPane.showInputDialog("Digite o primeiro valor:"));
+                        valor2 = Integer.parseInt(JOptionPane.showInputDialog("Digite o segundo valor:"));
 
-                    valor1 = Integer.parseInt(JOptionPane.showInputDialog("Digite o primeiro valor:"));
-                    valor2 = Integer.parseInt(JOptionPane.showInputDialog("Digite o segundo valor:"));
+                        // passsando os valores para minha classe Calculos
 
-                    // passsando os valores para minha classe Calculos
+                        operar.set_valor1(valor1);
+                        operar.set_valor2(valor2);
+                        // resultado a ser exibido
+                        operar.multiplicar();
+                        break;
+                    case 4:
+                        // Divisão
+                        JOptionPane.showMessageDialog(null, "Você escolheu a Divisão \n");
 
-                    operar.set_valor1(valor1);
-                    operar.set_valor2(valor2);
-                    // resultado a ser exibido
-                    operar.multiplicar();
-                    break;
-                case 4:
-                    // Divisão
-                    JOptionPane.showMessageDialog(null, "Você escolheu a Divisão \n");
+                        // pegando os valores da operação
+                        valor1 = Integer.parseInt(JOptionPane.showInputDialog("Digite o primeiro valor:"));
+                        valor2 = Integer.parseInt(JOptionPane.showInputDialog("Digite o segundo valor:"));
 
-                    // pegando os valores da operação
-                    valor1 = Integer.parseInt(JOptionPane.showInputDialog("Digite o primeiro valor:"));
-                    valor2 = Integer.parseInt(JOptionPane.showInputDialog("Digite o segundo valor:"));
+                        // passando os valores para os metodos
+                        operar.set_valor1(valor1);
+                        operar.set_valor2(valor2);
+                        // resultado a ser exibido
+                        operar.dividir();
+                        break;
+
+                    case 0:
+                        JOptionPane.showMessageDialog(null,
+                                "Você escolheu retornar do inicio \n execute o código novamente.");
+                        break;
+                }
+
+            } else {
+                    // Eponenciação
+                    JOptionPane.showMessageDialog(null, "Você escolheu a Exponênciação \n");
+                    valor1 = Integer.parseInt(JOptionPane.showInputDialog("Digite o  valor:"));
 
                     // passando os valores para os metodos
                     operar.set_valor1(valor1);
-                    operar.set_valor2(valor2);
+
                     // resultado a ser exibido
-                    operar.dividir();
-                    break;
+                    operar.quadrado();
 
-                case 0:
-                    JOptionPane.showMessageDialog(null,
-                            "Você escolheu retornar do inicio \n execute o código novamente.");
-                    break;
-            }
+             }
 
-        } else {
-            // Eponenciação
-            JOptionPane.showMessageDialog(null, "Você escolheu a Exponênciação \n");
-            valor1 = Integer.parseInt(JOptionPane.showInputDialog("Digite o  valor:"));
+        }while(operacao !=0 );
+        
+        // validadado as operações
 
-            // passando os valores para os metodos
-            operar.set_valor1(valor1);
-
-            // resultado a ser exibido
-            operar.quadrado();
-
-        }
         System.out.println("Executado com sucesso");
 
     }
