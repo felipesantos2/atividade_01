@@ -19,7 +19,7 @@ public class Calculadora {
         // inicio do laço 
         do{
              JOptionPane.showMessageDialog(null,
-                "Digite: \n 1 - Para somar:\n 2 - Para subtrair: \n 3 - Para multiplicar: \n 4 - Para dividir: \n 5 - Exponenciação( Quadrado de um numero: ) \n 0 - Para voltar do Inicio");
+                " -------------------------DIGITE :------------------------ \n 1 - Para Somar:\n 2 - Para subtrair: \n 3 - Para Multiplicar: \n 4 - Para Dividir: \n 5 - Exponenciação( Quadrado de um numero: ) \n 0 - Para voltar do nicio");
             
            // Descobrindo as operações;
           operacao = Integer.parseInt(JOptionPane.showInputDialog("Digite sua operação:"));
