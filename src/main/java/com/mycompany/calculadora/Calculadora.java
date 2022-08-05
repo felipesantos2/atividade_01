@@ -14,12 +14,12 @@ public class Calculadora {
         int valor1, valor2;
 
         // mensagem inicial a ser exibida
-        JOptionPane.showMessageDialog(null, "Vamos Fazer nossas operações \n");
+        JOptionPane.showMessageDialog(null, "Vamos fazer nossas operações \n");
         
         // inicio do laço 
         do{
              JOptionPane.showMessageDialog(null,
-                " -------------------------DIGITE :------------------------ \n 1 - Para Somar:\n 2 - Para subtrair: \n 3 - Para Multiplicar: \n 4 - Para Dividir: \n 5 - Exponenciação( Quadrado de um numero: ) \n 0 - Para voltar do nicio");
+                " ------------------------ DIGITE : ------------------------ \n 1 - Para Somar:\n 2 - Para subtrair: \n 3 - Para Multiplicar: \n 4 - Para Dividir: \n 5 - Exponenciação( Quadrado de um numero: ) \n 0 - Para voltar do inicio");
             
            // Descobrindo as operações;
           operacao = Integer.parseInt(JOptionPane.showInputDialog("Digite sua operação:"));
@@ -103,12 +103,12 @@ public class Calculadora {
 
                     case 0:
                         JOptionPane.showMessageDialog(null,
-                                "Você escolheu retornar do inicio \n execute o código novamente.");
+                                "Você escolheu retornar do inicio \n Execute o código novamente.");
                         break;
                 }
 
             } else {
-                    // Eponenciação
+                    // Exponenciação
                     JOptionPane.showMessageDialog(null, "Você escolheu a Exponênciação \n");
                     valor1 = Integer.parseInt(JOptionPane.showInputDialog("Digite o  valor:"));
 
